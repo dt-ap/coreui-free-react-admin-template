@@ -11,11 +11,10 @@ import {
   CLink
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
-import { useRecoilState } from 'recoil'
 
 // routes config
 import routes from '../routes'
-import { sidebarState } from '../state'
+import { useSidebarState } from '../state'
 
 import {
   TheHeaderDropdown,
@@ -25,7 +24,7 @@ import {
 }  from './index'
 
 const TheHeader = () => {
-  const [sidebarShow, setSidebarShow] = useRecoilState(sidebarState)
+  const [sidebarShow, setSidebarShow] = useSidebarState();
 
   const toggleSidebar = () => {
     const val = [true, 'responsive'].includes(sidebarShow) ? false : 'responsive'

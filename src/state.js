@@ -1,6 +1,8 @@
-import { atom } from 'recoil'
+import { atom, useRecoilState } from 'recoil'
 
-export const sidebarState = atom({
+const sidebarState = atom({
   key: 'sidebarState',
   default: 'responsive'
 });
+
+export const useSidebarState = () => useRecoilState(sidebarState)

@@ -12,14 +12,13 @@ import {
 } from '@coreui/react'
 
 import CIcon from '@coreui/icons-react'
-import { useRecoilState } from 'recoil'
 
 // sidebar nav config
 import navigation from './_nav'
-import { sidebarState } from '../state'
+import { useSidebarState } from '../state'
 
 const TheSidebar = () => {
-  const [show, setShow] = useRecoilState(sidebarState)
+  const [show, setShow] = useSidebarState();
 
   return (
     <CSidebar
